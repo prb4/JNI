@@ -1,0 +1,9 @@
+- ./app/jni and the corresponding ./app/libs are where the magic happens
+
+Success was accomplished by compiling the binary prior to building the apk.
+Process:
+cd ./app/jni
+$NDK_HOME/ndk-build
+
+This created the libs/ directory
+
