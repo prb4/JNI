@@ -1,0 +1,4 @@
+#Had to run make_standalone_toolchain.py
+/tmp/android_arm64/bin/aarch64-linux-android-gcc -c -fpic mylib.c
+/tmp/android_arm64/bin/aarch64-linux-android-gcc -o libmylib.so -shared -llog mylib.o 
+

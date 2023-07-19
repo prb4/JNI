@@ -20,7 +20,7 @@ public class HelloJni extends AppCompatActivity {
          * function.
          */
         TextView  tv = new TextView(this);
-        tv.setText( stringFromJNI() );
+        tv.setText( nativeFunction() );
         setContentView(tv);
     }
 
@@ -28,7 +28,7 @@ public class HelloJni extends AppCompatActivity {
      * 'hello-jni' native library, which is packaged
      * with this application.
      */
-    public native String  stringFromJNI();
+    public native String nativeFunction();
 
     /* This is another native method declaration that is *not*
      * implemented by 'hello-jni'. This is simply to show that
@@ -48,7 +48,9 @@ public class HelloJni extends AppCompatActivity {
      * installation time by the package manager.
      */
     static {
-        System.loadLibrary("hello-jni");
+
+        System.loadLibrary("wrapper");
+        //System.loadLibrary("mylib");
     }
 
 }

@@ -27,9 +27,22 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+/*
+    externalNativeBuild {
+        ndkBuild {
+            // Tells Gradle to find the root ndk-build script in the same
+            // directory as the project's build.gradle file. Gradle requires this
+            // build script to add your ndk-build project as a build dependency and
+            // pull your native sources into your Android project.
+            path "src/main/jni/Android.mk"
+        }
+    }
+*/
+
+
     sourceSets {
         main {
-            jniLibs.srcDirs = ['libs']
+            jniLibs.srcDirs = ['./src/main/libs']
         }
     }
 
